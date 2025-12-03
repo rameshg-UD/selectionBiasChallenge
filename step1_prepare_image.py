@@ -63,7 +63,7 @@ def prepare_image(
         print(f"Resized image from {img_array.shape} to {img_resized.shape} for processing")
     else:
         img_resized = img_array.copy()
-        print(f"Image size: {img_resized.shape} (no resizing needed)")
+        #print(f"Image size: {img_resized.shape} (no resizing needed)")
     
     # Ensure img_resized is 2D grayscale
     if len(img_resized.shape) > 2:
@@ -73,6 +73,6 @@ def prepare_image(
     else:
         raise ValueError(f"Unexpected image shape: {img_resized.shape}")
     
-    print(f"Final image shape: {img_resized.shape} (should be 2D for grayscale)")
+    #print(f"Final image shape: {img_resized.shape} (should be 2D for grayscale)")
     return img_resized
 
